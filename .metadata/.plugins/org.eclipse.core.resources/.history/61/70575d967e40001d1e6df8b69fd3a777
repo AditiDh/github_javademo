@@ -1,0 +1,28 @@
+package com.cybage.exception;
+
+public class ExceptionDemo {
+	public static void Method3()
+	{
+		int a=12;
+		int b=0;
+		int c=a/b;
+		System.out.println("OUTPUT"+c);
+	}
+	public static void Method2(){
+		Method3();
+	}
+public static void Method1(){
+		Method2();
+	}
+	public static void main(String[] args) {	
+		try{
+			
+			Method3();
+			}
+			catch (NullPointerException e) {
+				e.printStackTrace();
+			}
+
+	}
+
+}

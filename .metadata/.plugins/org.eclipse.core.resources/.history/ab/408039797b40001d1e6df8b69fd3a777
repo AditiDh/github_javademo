@@ -1,0 +1,23 @@
+package com.cybage.exception;
+
+public class ThrowException {
+	public void demo()
+	{
+		System.out.println("Inside Demo");
+		int a=10/0;
+		System.out.println("a="+a);
+	}
+
+	public static void main(String[] args) {
+		try
+		{
+			throw new NullPointerException();
+		}
+		catch (NullPointerException e) {
+			e.printStackTrace();
+		}
+		System.out.println("After Catch");
+
+	}
+
+}

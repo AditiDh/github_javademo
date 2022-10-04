@@ -1,0 +1,21 @@
+package com.cybage.basic;
+
+class Employee{
+	 int empId;
+	 String empName;
+
+String getEmpInfo()
+{
+	return "Employee Id="+empId+"Employee Name="+empName;
+}
+}
+public class EmpDemo {
+	public static void main(String[] args) {
+		Employee employee=new Employee();
+		employee.empId=1001;
+		employee.empName="John";
+		System.out.println(employee.getEmpInfo());
+	}
+
+}
+

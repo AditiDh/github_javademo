@@ -1,0 +1,18 @@
+package com.cybage.basic;
+
+interface MathFunctional
+{
+	public void add(int num1,int num2);
+}
+
+public class FunctionalExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		MathFunctional addition=(int num1,int num2)->System.out.println("Addition is :"+num1 + num2);
+		addition.add(5, 5);
+
+	}
+
+}

@@ -1,0 +1,35 @@
+package com.cybage.basic;
+
+class Employee {
+	int employeeId;
+	String name;
+	
+	public Employee() {
+		
+	}
+	
+	public Employee(int employeeId,String name) {
+		//this.employeeId=employeeId;
+		this(employeeId);
+		this.name=name;
+		
+	}
+	public Employee(int employeeId)
+	{
+		this .employeeId=employeeId;
+	}
+	
+	String getEmployeeInfo()
+	{
+	return "employeeId="+employeeId+" name="+name;
+	}
+}
+
+public class EmployeeDemo{
+	 public static void main(String[] args) {
+		 Employee employee=new Employee(1001,"John");
+		 Employee.msg="hello from java";
+		 Employee.displayMessage();
+		 System.out.println(employee.getEmployeeInfo());
+	 }
+ }

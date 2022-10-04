@@ -1,0 +1,17 @@
+package com.cybage.basic;
+
+interface Greeting
+{
+	public void greet();
+}
+
+
+
+public class LambdaDemo {
+
+	public static void main(String[] args) {
+		Greeting greeting=()->System.out.println("Hello from lambda expression");
+		// TODO Auto-generated method stub
+		greeting.greet();
+}
+}

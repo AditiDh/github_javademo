@@ -1,0 +1,72 @@
+package com.cybage.basic;
+
+interface Vehicle
+{
+	
+	public void changeSpeed(int a);
+	public void applyBrakes(int a);
+	
+
+}
+
+
+class Car implements Vehicle
+{
+	int speed;
+	@Override
+	public void changeSpeed(int increment) {
+		 speed = speed + increment ;
+		 System.out.println("Car Speed="+speed);
+		
+	}
+
+	@Override
+	public void applyBrakes(int decrement) {
+		speed = speed - decrement;
+		System.out.println("After Applying brakes=" +speed);
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}
+
+class Bike implements Vehicle
+{
+	int speed;
+	@Override
+	public void changeSpeed(int increment) {
+		speed = speed + increment ;
+		System.out.println("Bike Speed="+speed);
+		
+	}
+
+	@Override
+	public void applyBrakes(int decrement) {
+		speed = speed - decrement ;
+		System.out.println("After Applying brakes="+speed);
+		
+	}
+	
+}
+
+public class InterfaceVehicle {
+
+	public static void main(String[] args) {
+		
+		Car car=new Car();
+		car.changeSpeed(80);
+		
+		//Vehicle car1=new Car();
+		car.applyBrakes(50);
+		
+	Bike bike = new Bike();
+	bike.changeSpeed(30);
+	bike.applyBrakes(10);
+
+	
+
+
+	}
+
+}

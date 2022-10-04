@@ -1,0 +1,76 @@
+package com.cybage.basic;
+
+abstract class Shape{
+	int l,b;
+
+	public Shape(int l, int b)
+	{
+		this.l = l;
+		this.b = b;
+	}
+
+	abstract  void area() ;
+/*{ this method is useless do define it as abstract and any abstract method in a class its class name should also be abstract
+	System.out.println("Can't define area for shape");
+}*/
+}
+
+
+
+class Rectangle extends Shape
+{
+	public Rectangle(int l, int b)
+	{
+		super(l, b);
+	}
+
+	@Override
+	public void area()
+	{
+		System.out.println("Area of rectangle = "+(l*b));
+	}
+}
+
+
+
+class Triangle extends Shape
+{
+	public Triangle(int l, int b) 
+	{
+		super(l, b);
+		
+	}
+
+	@Override
+	public void area()
+	{
+		System.out.println("Area of triangle = "+0.5*(l*b));
+	}
+}
+
+
+public class AbstractDemo {
+	
+
+	public static void main(String[] args) {
+		Shape rec=new Rectangle(5,8);
+		rec.area(); 
+		
+		
+		Shape tri=new Triangle(5,8);
+		tri.area(); 
+		
+		/*rec.l=2;
+		rec.b=5;*/
+		//rec.area();
+		
+//		Shape tri=new Triangle();
+//		System.out.println(tri.area()); 
+		/*tri.l=5;
+		tri.b=2;*/
+		//tri.area();
+		
+
+	}
+
+}

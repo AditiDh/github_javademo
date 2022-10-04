@@ -1,0 +1,78 @@
+package com.cybage.basic;
+
+
+
+class Person1 {
+	
+
+	String name;
+	String address;
+	Person1(String name,String address)  // parameterized constructor
+	{
+		this.name=name;
+		this.address=address;
+	}
+	
+	/*public String getName()
+	{
+		return this.name;
+		
+	}
+	public String getAddress()
+	{
+		return this.address;
+		
+	}*/
+	
+	public String getInfo()
+	{
+		return "name="+this.name+" address="+this.address;
+	}
+}
+
+class Student1 extends Person1 {
+		private int rollNo;
+		private int marks;
+		Student1(String name,String address,int rollNo,int marks)
+		{
+			super(name,address); //calls super class parameterized constructor
+			this.rollNo=rollNo;
+			this.marks=marks;
+		}
+		/*public int getrollNo()
+		{
+			return this.rollNo;
+			
+		}
+		public int getmarks()
+		{
+			return this.marks;
+			
+		}*/
+		@Override
+		public String getInfo()
+		{
+			return "name="+this.name+" address="+this.address+ "roll no="+this.rollNo+"marks="+this.marks;
+		}
+	}
+
+
+
+public class methodoveride {
+
+                                                                                                                                                                                     
+	public static void main(String[] args) {    
+		Person1 person=new Person1("Aditi","Pune");    
+		System.out.println(person.getInfo());                                                                                      
+		//System.out.println("Person Name:"+person.getName()+"\n Person Address:"+person.getAddress());                                                                                      
+		// the obj are private so we access them using the methods i.e. getName and getAddress                                                                                             
+		                                                                                                                                                                                   
+		Student1 student=new Student1("Aditya","Satara",100,90);   
+		System.out.println(student.getInfo());  
+		//System.out.println("Student Name:"+student.getName()+"\n Student Address:"+student.getAddress()+"\n Student Roll no.:"+student.getrollNo()+"\n Student Marks:"+student.getmarks());
+		
+	}
+		
+                                                                                                                                                                                     
+	}                                                                                                                                                                                   
+                                                                                                                                                                                     

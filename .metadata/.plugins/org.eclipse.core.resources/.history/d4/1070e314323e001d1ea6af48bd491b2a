@@ -1,0 +1,26 @@
+package com.cybage.basic;
+
+interface Mathoperations
+{
+	public void add(int n1,int n2);
+}
+
+class Calculator implements MathOperations
+{
+	public void add(int n1,int n2) {
+		System.out.println("sum="+(n1+n2));
+	}
+}
+
+public class InterfaceDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Calculator calculator=new Calculator();
+		calculator.add(10,20);
+		MathOperations mOperations=new Calculator();
+		mOperations.add(20,30);
+
+	}
+
+}
